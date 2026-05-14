@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelompok 4</title>
+   
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+
 
     <style>
         body{
@@ -56,7 +59,7 @@
     flex-direction: row;
     justify-items: center;
     align-items: center;
-    position: absolute;
+    position: relative;
     z-index: 1;
     overflow: hidden;
   }
@@ -153,6 +156,21 @@
     border: solid white 1px;
   }
 
+  /* section tengah pertama */
+  .bagian2{
+    flex: 10;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+  }
+
+  i{
+    font-size: 30px;
+     color: red;
+  }
+  .displayproduk{
+    background-color: #000000;
+  }
 
   /* bagian bawah */
       
@@ -316,8 +334,7 @@
         
          <section class="bagian awal"
         style="flex: 1;
-        display: flex;
-        background-color: #000000;">
+        display: flex;">
        
         <header class="navigasi-home"
     style=" 
@@ -369,7 +386,7 @@
     <div class="slide-container" id="slideContainer">
     <section class="objek">
         <div class="isian"></div>
-       
+       <img src="Main slider.png" alt="slider1"></img>
         <section class="text">
              <h class="description"><b>Sleep Like Never Before</b></h>
              <br>
@@ -378,13 +395,39 @@
         Karena istirahat bukan sekadar tidur — ini tentang memulihkan energi untuk hari yang lebih baik.
         </p>
         <button class="selengkapnya">Selengkapnya</button>
-        </section>
-        
-        <img src="Main slider.png" alt="slider1">
+    </section>
+    </section>
+
+    <section class="objek">
+        <div class="isian"></div>
+       <img src="slider2.jpg" alt="slider2">
+        <section class="text">
+             <h class="description"><b>Sleep Like Never Before</b></h>
+             <br>
+            <p class="caption">Rasakan kenyamanan tidur dengan kualitas terbaik bersama Alphabed.
+        Desain elegan, material premium, dan kelembutan yang membuat setiap malam terasa lebih sempurna. 
+        Karena istirahat bukan sekadar tidur — ini tentang memulihkan energi untuk hari yang lebih baik.
+        </p>
+        <button class="selengkapnya">Selengkapnya</button>
+    </section>
+    </section>
+
+    <section class="objek">
+        <div class="isian"></div>
+        <img src="slider3.jpg" alt="slider3">
+        <section class="text">
+             <h class="description"><b>Sleep Like Never Before</b></h>
+             <br>
+            <p class="caption">Rasakan kenyamanan tidur dengan kualitas terbaik bersama Alphabed.
+        Desain elegan, material premium, dan kelembutan yang membuat setiap malam terasa lebih sempurna. 
+        Karena istirahat bukan sekadar tidur — ini tentang memulihkan energi untuk hari yang lebih baik.
+        </p>
+        <button class="selengkapnya">Selengkapnya</button>
+    </section>
     </section>
       
-      <img src="slider2.jpg" alt="slider2">
-      <img src="slider3.jpg" alt="slider3">
+     
+     
     </div>
   </div>
 
@@ -409,11 +452,15 @@
   }
 </script>
 
- 
         </section>
 
-        <section class="bagian 2"
-        style="flex: 5;"></section>
+        <section class="bagian 2">
+            <section class="displayproduk">
+
+            </section>
+        <i class="fa-solid fa-phone"></i>
+    
+    </section>
     </main>
 
     <footer class="footer">
