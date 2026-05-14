@@ -335,6 +335,60 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             align-items: center;
             justify-content: center;
         }
+
+        /* FLASH SALE ========================================================= */
+        .flashsale {
+            height: 50dvh;
+            width: 30dvw;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 30px grey;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .judulflashsale {
+            flex: 1;
+            text-align: center;
+            background-color: #1d3f8f;
+            color: white;
+            padding: 20px;
+            font-family: sans-serif;
+            border-radius: 10px;
+        }
+
+        .boxtombol {
+            flex: 2;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flashbutton {
+            background-color: #1d3f8f;
+            border-color: transparent;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            font-weight: bold;
+            border-radius: 20px;
+            animation: animasitombolbesar alternate infinite 1.5s;
+        }
+
+        @keyframes animasitombolbesar {
+            from {
+                width: 15dvw;
+                height: 6dvh;
+                font-size: small;
+            }
+
+            to {
+                font-size: large;
+                width: 20dvw;
+                height: 12dvh;
+            }
+        }
   /* bagian bawah */
       
 
@@ -399,7 +453,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         }
 
         .newsletter input[type="email"] {
-            background-color: #854c4c;
+            background-color: white;
             color: #333;
         }
 
@@ -483,6 +537,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
                 flex-direction: column;
             }
         }
+
+       
     </style>
 </head>
 <body>
@@ -945,12 +1001,35 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         <button class="caritahu">Lihat Wingback Upholstered Bed</button>
 
         </section>
-        
-
-    
-   
-
 </section>
+<section class="bagiantiga"
+ style="background-color: #ffffff;
+        margin-top : 100px;
+        width: 100dvw;
+        height: 70dvw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 10px 20px 20px 20px;">
+    <section class="flashsale">
+        <div class="judulflashsale">
+            <h2>⚡ FLASH SALE SPECIAL OFFER ⚡</h2>
+
+            <div id="timerpromo" style="font-size: 2rem; font-weight: bold">
+                00:00:00
+            </div>
+
+            <p>Segera checkout sebelum kehabisan!</p>
+        </div>
+
+        <div class="boxtombol">
+            <button class="flashbutton">ORDER SEKARANG</button>
+        </div>
+    </section>
+</section>
+
+         
 
  
       
@@ -988,9 +1067,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             <div class="footer-col">
                 <h3>Customer Care</h3>
                 <ul>
-                    <li><i class="fa-solid fa-phone"></i> +62 8xx xxxx xxxx</li>
-                    <li><i class="fa-solid fa-envelope"></i> support@alphabed.com</li>
-                    <li><i class="fa-regular fa-clock"></i> Senin - Sabtu | 09.00 - 18.00</li>
+                    <li ><i class="fa-solid fa-phone" style="margin-right: 10px;"></i>+62 8xx xxxx xxxx</li>
+                    <li><i class="fa-solid fa-envelope"style="margin-right: 10px;"></i>support@alphabed.com</li>
+                    <li><i class="fa-regular fa-clock"style="margin-right: 10px;"></i>Senin - Sabtu | 09.00 - 18.00</li>
                 </ul>
             </div>
         </div>
@@ -1003,6 +1082,39 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     </footer>
 
 </body>
+<script>
+    let targetTime = new Date().getTime() + 1 * 60 * 60 * 1000;
+
+    function updateTimer() {
+        let now = new Date().getTime();
+        let distance = targetTime - now;
+
+        let hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+
+        let minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60),
+        );
+
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("timerpromo").innerHTML =
+            `${hours.toString().padStart(2, "0")}:` +
+            `${minutes.toString().padStart(2, "0")}:` +
+            `${seconds.toString().padStart(2, "0")}`;
+
+        if (distance < 0) {
+            clearInterval(timerInterval);
+            document.getElementById("timerpromo").innerHTML =
+                "PROMO SELESAI";
+        }
+    }
+
+    let timerInterval = setInterval(updateTimer, 1000);
+
+    updateTimer();
+</script>
 </html>
 </body>
 </html>
