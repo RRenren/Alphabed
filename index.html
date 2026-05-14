@@ -178,6 +178,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   
   .tawar{
     margin-top: 20px;
+    color: #1d3f8f;
   }
 
 
@@ -185,10 +186,155 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     font-size: 30px;
      color: red;
   }
-  .displayproduk{
+
+  .display{
+    width: 100dvw;
+    height: 90dvh;
+    display: flex;
+    flex-direction: row;
+    gap :30px;
+    padding: 20px 50px 20px 50px;
+
+
+  }
+  .produk{
     background-color: white;
+    border-radius: 20px;
+    border: #000000 solid 1px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+   
   }
 
+  /* rating */
+  .rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.rating input {
+  display: none; 
+}
+
+.rating label {
+  font-size: 30px;
+  color: #ddd; 
+  cursor: pointer;
+}
+
+.rating label::before {
+  content: "★";
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #ffca08; 
+}
+/* ------------------------------------------------------ */
+.infoproduk{
+    flex: 1;
+}
+.ulasan{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+.deskproduk{
+    margin : 5px 10px 5px 20px;
+
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.promo {
+        font-size: 20px;
+        color: gray;
+      }
+ .harga {
+        font-size: 20px;
+        color: black;
+        opacity: 1;
+        animation: fadein forwards 1s;
+      }
+
+      /* progress bar */
+      .spec{
+            width: 90%;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap : 20px;
+            
+        }
+
+        .spec p{
+            font-size: 16px;
+            color: #1d3f8f;
+            flex: 1;
+        }
+
+        .bar{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex: 4;
+            gap: 8px;
+        }
+
+        .segment{
+            flex: 1;
+            height: 10px;
+
+            background: #e5e5e5;
+        }
+
+        .active{
+            background: #244593;
+        }
+        /* ============================================================= */
+
+        section.deskproduk>h3{
+            color: #1d3f8f;
+        }
+        section.firmness>h5{
+            color: #1d3f8f;
+        }
+        section.ketebalan>h5{
+            color: #1d3f8f;
+        }
+
+        .caritahu{
+            width: 100%;
+            margin-top: 10px;
+            height: 50px;
+            border-radius: 20px;
+            background-color:#1d3f8f;
+            color: white;
+            border: solid gray 1px;
+        }
+        .fotoproduk{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
   /* bagian bawah */
       
 
@@ -485,13 +631,323 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         padding: 10px 20px 20px 20px;">
 
          <section class="icon">
-             <i class="fa-regular fa-clock"></i>
-             <i class="fa-solid fa-shield-halved"></i>
+             <i class="fa-solid fa-sun"></i>
+             <i class="fa-solid fa-moon"></i>
         </section>
 
        <section class="tawar">  <h1>Temukan kasur yang cocok untuk kamu</h1> 
     </section>
 
+    <section class="display">
+        <section class="infoproduk">
+        <section class="produk">
+            <section class="fotoproduk">
+                 <img src="Hybrid Mattress Premium.png" alt="produk" width="80%">
+            </section>
+           
+
+            <section class="deskproduk">
+
+            <section class="ulasan">
+                 <section class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+            </section>
+            <p class="review" style="color: gray;">(1298 reviews)</p>
+            </section>
+            <br>
+           <h3>ALPHA PREMIUM HYBRID MATTRESS</h3>
+           <br>
+           <section class="price">
+            <p class="promo"><del>Rp. 6.005.000</del></p>
+            <p class="harga">Rp. 4.200.000</p>
+           </section>
+
+           <br>
+
+           <section class="spesifikasi"
+           style="display: flex;
+           flex-direction: row;
+           justify-content: start;
+           gap : 100px;">
+            <section class="firmness">
+                <h5>Firmness</h5>
+                <p>Medium Plush</p>
+            </section>
+            <section class="ketebalan">
+                <h5>Ketebalan</h5>
+                <p>30 cm</p>
+            </section>
+           </section>
+
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Kesejukan</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Topangan</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Responsif</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+
+            
+
+            </section>
+            
+        </section>
+
+        <button class="caritahu"> Lihat Hybrid Mattress Premium</button>
+
+        </section>
+        <section class="infoproduk">
+        <section class="produk">
+            <section class="fotoproduk">
+                 <img src="upholstered bed frame.jpg" alt="produk" width="80%">
+            </section>
+           
+
+            <section class="deskproduk">
+
+            <section class="ulasan">
+                 <section class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+            </section>
+            <p class="review" style="color: gray;">(2004 reviews)</p>
+            </section>
+            <br>
+           <h3>ALPHA UNPHOLSTERED BED FRAME</h3>
+           <br>
+           <section class="price">
+            <p class="promo"><del>Rp. 8.200.000</del></p>
+            <p class="harga">Rp. 5.999.999</p>
+           </section>
+
+           <br>
+
+           <section class="spesifikasi"
+           style="display: flex;
+           flex-direction: row;
+           justify-content: start;
+           gap : 100px;">
+            <section class="firmness">
+                <h5>Firmness</h5>
+                <p>Medium Firm</p>
+            </section>
+            <section class="ketebalan">
+                <h5>Ketebalan</h5>
+                <p>25–30 cm</p>
+            </section>
+           </section>
+
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Kesejukan</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Topangan</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Responsif</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+
+            
+
+            </section>
+            
+        </section>
+
+        <button class="caritahu">Lihat Upholstered Bed Frame</button>
+
+        </section>
+        <section class="infoproduk">
+        <section class="produk">
+            <section class="fotoproduk">
+                 <img src="Wingback Upholstered Bed.jpg" alt="produk" width="80%">
+            </section>
+           
+
+            <section class="deskproduk">
+
+            <section class="ulasan">
+                 <section class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+            </section>
+            <p class="review" style="color: gray;">(983 reviews)</p>
+            </section>
+            <br>
+           <h3>ALPHA WINGBACK UPHOLSTERED BED</h3>
+           <br>
+           <section class="price">
+            <p class="promo"><del>Rp. 6.005.000</del></p>
+            <p class="harga">Rp. 4.200.000</p>
+           </section>
+
+           <br>
+
+           <section class="spesifikasi"
+           style="display: flex;
+           flex-direction: row;
+           justify-content: start;
+           gap : 100px;">
+            <section class="firmness">
+                <h5>Firmness</h5>
+                <p>Medium</p>
+            </section>
+            <section class="ketebalan">
+                <h5>Ketebalan</h5>
+                <p>28–35 cm</p>
+            </section>
+           </section>
+
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Kesejukan</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segmen"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Topangan</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Responsif</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+
+            
+
+            </section>
+            
+        </section>
+
+        <button class="caritahu">Lihat Wingback Upholstered Bed</button>
+
+        </section>
+        
+
+    
    
 
 </section>
