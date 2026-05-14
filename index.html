@@ -14,7 +14,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         body{
         background-color: gainsboro;
         width: 100dvw;
-        height: 400dvh;
+        height: 700dvh;
         display: flex;
         flex-direction: column;
         margin: 0;
@@ -23,10 +23,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     }
     main{
         width: 100dvw;
-        height: 200dvw;
+        height: 700dvw;
         background-color: #000000;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: start;
         align-items: start;
     }
@@ -180,12 +180,22 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     margin-top: 20px;
     color: #1d3f8f;
   }
+  .judultesti{
+    margin : 0px 300px 5px 300px;
+    color: #1d3f8f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
 
-  i{
+
+  .icon>i{
     font-size: 30px;
      color: red;
   }
+
+  
 
   .display{
     width: 100dvw;
@@ -208,6 +218,74 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     align-items: start;
    
   }
+
+   .reviewer{
+    width: 100dvw;
+    height: 70dvh;
+    display: flex;
+    flex-direction: row;
+    gap :30px;
+    padding: 20px 50px 20px 50px;
+  }
+  .testibox{
+    background-color: white;
+    border-radius: 20px;
+    border: #000000 solid 1px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+   
+  }
+
+  .rate{
+    flex: 1;
+  }
+
+
+  .komentar{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #4a93dd;
+  }
+  .komen{
+    word-break :break-word;
+    align-items: center;
+    margin: 0px 20px 0px 20px;
+    font-size: 30px;
+  }
+  .komentator{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1d3f8f;
+  }
+
+  .pembeli{
+    font-size: 28px;
+  }
+  .probeli{
+    font-size: 18px;
+
+  }
+
+  .fotprofil{
+        flex: 1;
+        margin-top:10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            
+        }
+  .fotprofil>i{
+            font-size: 50px;
+
+        }
 
   /* rating */
   .rating {
@@ -335,6 +413,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             align-items: center;
             justify-content: center;
         }
+        
 
         /* FLASH SALE ========================================================= */
         .flashsale {
@@ -388,6 +467,27 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
                 width: 20dvw;
                 height: 12dvh;
             }
+        }
+
+        /* POP UP ======================================================================= */
+        #modalpromo {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100dvw;
+            height: 100dvh;
+            background-color: rgba(28, 28, 28, 0.7);
+        }
+
+
+
+        /* Testimoni==================== */
+        .testi{
+            background-color: #1d3f8f;
+            flex: 1;
+
         }
   /* bagian bawah */
       
@@ -542,11 +642,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     </style>
 </head>
 <body>
-     
-    <!-- header navigasi -->
-    
-
-    <!-- main pertama  -->
     
     <header>
           <section class="bagian awal"
@@ -1002,16 +1097,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
         </section>
 </section>
+</section>
 <section class="bagiantiga"
  style="background-color: #ffffff;
-        margin-top : 100px;
         width: 100dvw;
-        height: 70dvw;
+        height: 37dvw;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: start;
-        padding: 10px 20px 20px 20px;">
+        padding: 10px 20px 0px 20px;">
     <section class="flashsale">
         <div class="judulflashsale">
             <h2>⚡ FLASH SALE SPECIAL OFFER ⚡</h2>
@@ -1029,7 +1124,165 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     </section>
 </section>
 
-         
+
+<!-- <section class="popup">
+     <div id="modalpromo">
+        <div
+            style="
+                background-color: white;
+                margin: 15% auto;
+                padding: 30px;
+                width: 30dvw;
+                text-align: center;
+                border-radius: 15px;
+                position: relative;
+            "
+        >
+            <span
+                onclick="closePromo()"
+                style="
+                    position: absolute;
+                    right: 15px;
+                    top: 10px;
+                    cursor: pointer;
+                    font-size: 20px;
+                "
+            >
+                &times;
+            </span>
+
+            <h2 style="color:  #1d3f8f">KHUSUS PEMBELIAN PERTAMA ANDA!</h2>
+            <br>
+
+            <p>
+                Gunakan kode <b>ALPHATHEFIRST26</b> diskon  sebesar 15% pada pembelian
+                pertama Anda.
+            </p>
+            <br>
+
+            <button
+                onclick="closePromo()"
+                style="
+                    background:  #1d3f8f;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                "
+            >
+                Claim Diskon
+            </button>
+        </div>
+    </div>
+</section> -->
+
+ <section
+        class="bagianempat"
+        style="background-color: #ffffff;
+        width: 100dvw;
+        height: 70dvw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 10px 20px 20px 20px;">
+
+
+       <section class="judultesti">  <h1 style="text-align: center;">Dipercaya Lebih dari +700.000 Pelanggan</h1> 
+        <br>
+        <p>Masih terus bertambah hingga sekarang </p>
+    </section>
+
+    <section class="reviewer">
+        <section class="testibox">
+            <section class="fotprofil">
+              <i class="fa-solid fa-user"></i>
+            </section>
+
+            <section class="komentar">
+                <p class="komen">“Kasurnya empuk tapi tetap support punggung. Tidur jadi lebih nyenyak dan nggak pegal pas bangun.”</p>
+            </section>
+           
+
+            <section class="rate">
+
+                 <section class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+            </section>
+            </section>
+
+            <section class="komentator">
+                <h2 class="pembeli">Arima</h2>
+                <p class="probeli">ALPHA PREMIUM</p>
+            </section>
+
+        </section>
+
+        <section class="testibox">
+            <section class="fotprofil">
+              <i class="fa-solid fa-user"></i>
+            </section>
+
+            <section class="komentar">
+                <p class="komen">“Kasurnya empuk tapi tetap support punggung. Tidur jadi lebih nyenyak dan nggak pegal pas bangun.”</p>
+            </section>
+           
+
+            <section class="rate">
+
+                 <section class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+            </section>
+            </section>
+
+            <section class="komentator">
+                <h2 class="pembeli">Arima</h2>
+                <p class="probeli">ALPHA PREMIUM</p>
+            </section>
+
+        </section>
+
+        <section class="testibox">
+            <section class="fotprofil">
+              <i class="fa-solid fa-user"></i>
+            </section>
+
+            <section class="komentar">
+                <p class="komen">“Kasurnya empuk tapi tetap support punggung. Tidur jadi lebih nyenyak dan nggak pegal pas bangun.”</p>
+            </section>
+           
+
+            <section class="rate">
+
+                 <section class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+            </section>
+            </section>
+
+            <section class="komentator">
+                <h2 class="pembeli">Arima</h2>
+                <p class="probeli">ALPHA PREMIUM</p>
+            </section>
+
+        </section>
+        
+
+        
+</section>
+</section>
 
  
       
@@ -1115,6 +1368,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
     updateTimer();
 </script>
+
+<script>
+    setTimeout(() => {
+        document.getElementById("modalpromo").style.display = "block";
+    }, 5000);
+
+    function closePromo() {
+        document.getElementById("modalpromo").style.display = "none";
+    }
+</script>
+
 </html>
 </body>
 </html>
