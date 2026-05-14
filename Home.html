@@ -7,7 +7,6 @@
 </head>
 
     <style>
-        /* Pengaturan Dasar */
         body{
         background-color: gainsboro;
         width: 100dvw;
@@ -15,19 +14,15 @@
         display: flex;
         flex-direction: column;
         margin: 0;
-        
+        gap : 5px;
 
     }
-    header{
-        flex:2;
-        background-color:aquamarine;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
     main{
-        flex: 10;
+        flex: 20;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
     }
     
         * {
@@ -37,14 +32,136 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        body {
-            background-color: #f4f4f4; /* Warna background untuk kontras (opsional) */
+        a.navigasi{
+            gap:10px;
+            text-decoration: none;
+            color: #0c1c15;
+            font-size: 18px;
         }
+    /* slider */
+      .slider{
+    width:100dvw;
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+   
+  }
+  .objek{
+    width:100dvw;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+  }
 
-        /* Styling Footer Utama */
+
+
+  .slides{
+    width:100dvw;
+    height:700px;
+    overflow:hidden;
+    position:relative;
+  }
+
+  .slide-container{
+    display:flex;
+    width:300dvw;
+    transition:0.5s;
+  }
+
+  .slide-container img{
+    width:100dvw;
+    height:700px;
+    object-fit:cover;
+  }
+
+  .dots{
+    margin-top:15px;
+    text-align:center;
+    position: absolute;
+    bottom: 20px;
+    z-index: 4;
+  
+  }
+
+  .dot{
+    height:15px;
+    width:15px;
+    margin:0 5px;
+    background:#bbb;
+    border-radius:50%;
+    display:inline-block;
+    cursor:pointer;
+   
+  
+  }
+
+  .active{
+    background:#ffffff;
+  }
+
+  .isian{
+    height: 700px;
+    width: 100dvw;
+    background-color: #000000;
+    opacity: 40%;
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+   
+  }
+
+  .description{
+  
+    margin-left: 50px;
+    color: white;
+    font-size: 40px;
+    
+
+  }
+  .caption{
+    margin-left: 50px;
+    color: white;
+    font-size: 16px;
+    word-spacing: 20px;
+    
+
+  }
+  .text{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 6;
+    width: 70%;
+  }
+
+  .selengkapnya{
+    margin-left: 50px;
+    margin-top: 20px;
+    width: 250px;
+    height: 50px;
+    border-radius: 20px;
+    background-color:#0c1c15;
+    color: white;
+    border: solid white 1px;
+  }
+
+
+  /* bagian bawah */
+      
+
+        
+
         .footer {
-            background-color: #0c1c15; /* Warna hijau gelap sesuai gambar */
-            color: #d1d5d3; /* Warna teks abu-abu terang */
+            background-color: #0c1c15; 
+            color: #d1d5d3; 
             padding: 60px 20px 20px 20px;
         }
 
@@ -188,13 +305,115 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>ALPHA BED</h1>
-        <nav></nav>
+    <!-- header navigasi -->
+    
 
+    <!-- main pertama  -->
+    
+
+       
+            <main>
+        
+         <section class="bagian awal"
+        style="flex: 1;
+        display: flex;
+        background-color: #000000;">
+       
+        <header class="navigasi-home"
+    style=" 
+        flex:1;
+        background-color:white;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+        margin-right:100px;
+        margin-top: 20px;
+        border-radius: 20px;
+        border: gray solid 1px;
+        box-shadow: 0px 10px 10px 0px gray;
+        position: absolute;
+        z-index: 3;">
+
+        <section
+        class="logo-nav"
+        style="flex: 1;">
+        <img src="Logoalphabed.webp" alt="logo-navigasi"
+        width="190px"
+        height="100px">
+       </section>
+
+        <section class="navigasi"
+        style="
+        flex: 1;
+        gap: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        margin: 50px;">
+            <a class="navigasi" href="#">Home</a>
+            <a class="navigasi" href="#">About</a>
+            <a class="navigasi" href="#">Products</a>
+            <a class="navigasi" href="#">Testimonials</a>
+            <a class="navigasi" href="#">Contacts</a>
+            
+        </section>
     </header>
-    <main>
 
+        
+
+
+        <div class="slider">
+  <div class="slides">
+    <div class="slide-container" id="slideContainer">
+    <section class="objek">
+        <div class="isian"></div>
+       
+        <section class="text">
+             <h class="description"><b>Sleep Like Never Before</b></h>
+             <br>
+            <p class="caption">Rasakan kenyamanan tidur dengan kualitas terbaik bersama Alphabed.
+        Desain elegan, material premium, dan kelembutan yang membuat setiap malam terasa lebih sempurna. 
+        Karena istirahat bukan sekadar tidur — ini tentang memulihkan energi untuk hari yang lebih baik.
+        </p>
+        <button class="selengkapnya">Selengkapnya</button>
+        </section>
+        
+        <img src="Main slider.png" alt="slider1">
+    </section>
+      
+      <img src="slider2.jpg" alt="slider2">
+      <img src="slider3.jpg" alt="slider3">
+    </div>
+  </div>
+
+  <div class="dots">
+    <span class="dot active" onclick="showSlide(0)"></span>
+    <span class="dot" onclick="showSlide(1)"></span>
+    <span class="dot" onclick="showSlide(2)"></span>
+  </div>
+
+</div>
+
+<script>
+  const slideContainer = document.getElementById("slideContainer");
+  const dots = document.querySelectorAll(".dot");
+
+  function showSlide(index){
+    slideContainer.style.transform =
+      `translateX(-${index * 100}dvw)`;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
+</script>
+
+ 
+        </section>
+
+        <section class="bagian 2"
+        style="flex: 5;"></section>
     </main>
 
     <footer class="footer">
@@ -247,11 +466,4 @@
 </html>
 </body>
 </html>
-    </footer>
-
-    <header><nav></nav></header>
-    
-    <main>
-
-    </main>
 
