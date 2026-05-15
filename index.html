@@ -34,7 +34,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 /* DARK MODE */
         body.dark{
-            background-image: url(nightmode.webp);
+            background-image: url(nightmode.jpg);
             background-repeat:repeat;
             background-size: auto;
             color: white;
@@ -63,6 +63,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         }
         body.dark .caption{
             color:white;
+        }
+        body.dark .fotprofil>i{
+            color:black;
         }
        
 
@@ -139,8 +142,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     }
         .activenavigation>a {
         color: white;
-        margin-left: 2px;
-        margin-right: 2px;
+        margin: 5px 5px 5px 5px;
     }
         .closenavigation>a {
         color: black;
@@ -149,15 +151,24 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
      .closenavigation {
         flex: 1;
-
         display: flex;
         justify-content: center;
         align-items: center;
-
-        color: white;
         font-size: 20px;
         font-weight: bold;
     }
+
+    .closenavigation:hover{
+        background-color: #4a93dd;
+        border-radius: 5px;
+        transition:  background-color 1s;
+    }
+     .closenavigation>a:hover {
+        color: white;
+        margin: 5px 5px 5px 5px;
+        transition: color 1s, margin 1s;
+    }
+
     /* slider */
       .slider{
     width:100dvw;
@@ -268,9 +279,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     width: 250px;
     height: 50px;
     border-radius: 20px;
-    background-color:#0c1c15;
+    background-color:#1d3f8f;
     color: white;
     border: solid white 1px;
+  }
+
+  .selengkapnya:hover{
+    width: 300px;
+    height: 60px;
+    transition: width 2s,height 2s;
+
   }
 
   /* section tengah pertama */
@@ -298,7 +316,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
   .icon>i{
     font-size: 30px;
-     color: red;
+     color: white;
   }
 
   
@@ -446,6 +464,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             background-color:#1d3f8f;
             color: white;
             border: solid gray 1px;
+        }
+        .caritahu:hover{
+            background-color:#021136;
         }
         .fotoproduk{
             display: flex;
@@ -600,6 +621,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             
 
         }
+        .lihattesti:hover{
+            background-color: #021136;
+        }
         .lihattesti>a{
             color: white;
             text-decoration: none;
@@ -672,14 +696,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             
 
         }
-        .semuatesti{
-            background-color: #1d3f8f;
-            width:400px;
-            height: 40px;
-            border-radius: 20px;
-            margin-top: 10px;
-            margin-bottom: 10px;
+        .bacaberita:hover{
+            background-color: #021136;
         }
+    
 
         .semuatesti>a{
             color: white;
@@ -957,26 +977,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         <div class="isian"></div>
        <img src="slider2.jpg" alt="slider2">
         <section class="text">
-             <h class="description"><b>Sleep Like Never Before</b></h>
+             <h class="description"><b>Sleep Better, Live Better</b></h>
              <br>
-            <p class="caption">Rasakan kenyamanan tidur dengan kualitas terbaik bersama Alphabed.
-        Desain elegan, material premium, dan kelembutan yang membuat setiap malam terasa lebih sempurna. 
-        Karena istirahat bukan sekadar tidur — ini tentang memulihkan energi untuk hari yang lebih baik.
-        </p>
         <button class="selengkapnya">Selengkapnya</button>
     </section>
     </section>
 
     <section class="objek">
         <div class="isian"></div>
-        <img src="slider3.jpg" alt="slider3">
+        <img src="slider3.jpeg" alt="slider3">
         <section class="text">
-             <h class="description"><b>Sleep Like Never Before</b></h>
+             <h class="description"><b>Alphabet — Tempat Terbaik untuk Mengistirahatkan Hari Anda</b></h>
              <br>
-            <p class="caption">Rasakan kenyamanan tidur dengan kualitas terbaik bersama Alphabed.
-        Desain elegan, material premium, dan kelembutan yang membuat setiap malam terasa lebih sempurna. 
-        Karena istirahat bukan sekadar tidur — ini tentang memulihkan energi untuk hari yang lebih baik.
-        </p>
         <button class="selengkapnya">Selengkapnya</button>
     </section>
     </section>
@@ -1637,16 +1649,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
         </section>
         </section>
-        <section class="bagianakhir"
-        style="display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 100dvw;
-        height: 10dvh;
-        background-color: rgb(85, 178, 255,0.5);">
-             <button class="semuatesti"><a href="#">Lihat semua testimoni</a></button>
-        </section>
+    
          
             
       
