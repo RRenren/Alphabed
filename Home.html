@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelompok 4</title>
    
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 
@@ -13,7 +14,7 @@
         body{
         background-color: gainsboro;
         width: 100dvw;
-        height: 300dvh;
+        height: 700dvh;
         display: flex;
         flex-direction: column;
         margin: 0;
@@ -21,11 +22,21 @@
 
     }
     main{
-        flex: 20;
+        width: 100dvw;
+        height: 700dvw;
+        background-color: #000000;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: start;
         align-items: start;
+    }
+
+    header{
+        flex:3;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
     }
     
         * {
@@ -36,11 +47,45 @@
         }
 
         a.navigasi{
-            gap:10px;
             text-decoration: none;
             color: #0c1c15;
             font-size: 18px;
         }
+
+        .activenavigation {
+        width:fit-content;
+        background-color:#1d3f8f;
+        border-radius: 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+        .activenavigation>a {
+        color: white;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+        .closenavigation>a {
+        color: black;
+    }
+
+
+     .closenavigation {
+        flex: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
     /* slider */
       .slider{
     width:100dvw;
@@ -48,7 +93,7 @@
     flex-direction: column;
     justify-items: start;
     align-items: center;
-    position: absolute;
+    position: relative;
     z-index: 1;
     overflow: hidden;
    
@@ -157,20 +202,461 @@
   }
 
   /* section tengah pertama */
-  .bagian2{
-    flex: 10;
-    background-color: #000000;
+  .icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+  
+  .tawar{
+    margin-top: 20px;
+    color: #1d3f8f;
+  }
+  .judultesti{
+    margin : 0px 300px 5px 300px;
+    color: #1d3f8f;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
-  i{
+
+
+  .icon>i{
     font-size: 30px;
      color: red;
   }
-  .displayproduk{
-    background-color: #000000;
+
+  
+
+  .display{
+    width: 100dvw;
+    height: 90dvh;
+    display: flex;
+    flex-direction: row;
+    gap :30px;
+    padding: 20px 50px 20px 50px;
+
+
   }
+  .produk{
+    background-color: white;
+    border-radius: 20px;
+    border: #000000 solid 1px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+   
+  }
+
+   
+
+  /* rating */
+  .rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.rating input {
+  display: none; 
+}
+
+.rating label {
+  font-size: 30px;
+  color: #ddd; 
+  cursor: pointer;
+}
+
+.rating label::before {
+  content: "★";
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #ffca08; 
+}
+/* ------------------------------------------------------ */
+.infoproduk{
+    flex: 1;
+}
+.ulasan{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+.deskproduk{
+    margin : 5px 10px 5px 20px;
+
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.promo {
+        font-size: 20px;
+        color: gray;
+      }
+ .harga {
+        font-size: 20px;
+        color: black;
+        opacity: 1;
+        animation: fadein forwards 1s;
+      }
+
+      /* progress bar */
+      .spec{
+            width: 90%;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap : 20px;
+            
+        }
+
+        .spec p{
+            font-size: 16px;
+            color: #1d3f8f;
+            flex: 1;
+        }
+
+        .bar{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex: 4;
+            gap: 8px;
+        }
+
+        .segment{
+            flex: 1;
+            height: 10px;
+
+            background: #e5e5e5;
+        }
+
+        .active{
+            background: #244593;
+        }
+        /* ============================================================= */
+
+        section.deskproduk>h3{
+            color: #1d3f8f;
+        }
+        section.firmness>h5{
+            color: #1d3f8f;
+        }
+        section.ketebalan>h5{
+            color: #1d3f8f;
+        }
+
+        .caritahu{
+            width: 100%;
+            margin-top: 10px;
+            height: 50px;
+            border-radius: 20px;
+            background-color:#1d3f8f;
+            color: white;
+            border: solid gray 1px;
+        }
+        .fotoproduk{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        
+
+        /* FLASH SALE ========================================================= */
+        .flashsale {
+            height: 50dvh;
+            width: 30dvw;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 30px grey;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .judulflashsale {
+            flex: 1;
+            text-align: center;
+            background-color: #1d3f8f;
+            color: white;
+            padding: 20px;
+            font-family: sans-serif;
+            border-radius: 10px;
+        }
+
+        .boxtombol {
+            flex: 2;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flashbutton {
+            background-color: #1d3f8f;
+            border-color: transparent;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            font-weight: bold;
+            border-radius: 20px;
+            animation: animasitombolbesar alternate infinite 1.5s;
+        }
+
+        @keyframes animasitombolbesar {
+            from {
+                width: 15dvw;
+                height: 6dvh;
+                font-size: small;
+            }
+
+            to {
+                font-size: large;
+                width: 20dvw;
+                height: 12dvh;
+            }
+        }
+
+        /* POP UP ======================================================================= */
+        #modalpromo {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100dvw;
+            height: 100dvh;
+            background-color: rgba(28, 28, 28, 0.7);
+        }
+
+
+
+        /* Testimoni==================== */
+            .reviewer{
+            width: 100dvw;
+            height: 70dvh;
+            display: flex;
+            flex-direction: row;
+            gap :30px;
+            padding: 20px 50px 20px 50px;
+        }
+        .testibox{
+            background-color: white;
+            border-radius: 20px;
+            border: #000000 solid 1px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+        
+        }
+
+        .rate{
+            flex: 1;
+        }
+
+
+        .komentar{
+            flex: 4;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            color: #4a93dd;
+        }
+        .komen{
+            word-break :break-word;
+            align-items: center;
+            margin: 0px 20px 0px 20px;
+            font-size: 30px;
+        }
+        .komentator{
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #1d3f8f;
+        }
+
+        .pembeli{
+            font-size: 28px;
+        }
+        .probeli{
+            font-size: 18px;
+
+        }
+
+        .fotprofil{
+                flex: 1;
+                margin-top:10px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    
+                }
+        .fotprofil>i{
+                    font-size: 50px;
+
+                }
+
+        .lihattesti{
+            background-color: #1d3f8f;
+            width: 40dvw;
+            height: 40px;
+            border-radius: 20px;
+            
+
+        }
+        .lihattesti>a{
+            color: white;
+            text-decoration: none;
+
+        }
+        .testi{
+            background-color: #1d3f8f;
+            flex: 1;
+
+        }
+
+        /* blog ============================= */
+        .kumpulblog{
+            width: 100dvw;
+            height: 100dvh;
+            display: flex;
+            flex-direction: row;
+            gap :30px;
+            padding: 20px 50px 20px 50px;
+        }
+        .berita{
+            background-color: white;
+            border-radius: 20px;
+            border: #000000 solid 1px;
+            width: fit-content;
+            max-width: 400px;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            margin: 10px 5px 5px 5px;
+            padding: 5px 5px 5px 5px;
+        
+        }
+       
+
+        .fotoberita{
+                margin-top:10px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+    
+
+        
+        .infoberita{
+            margin: 10px 5px 5px 20px;
+        }
+
+         .judulberita{
+            font-size: 28px;
+            text-align: left;
+        }
+        .tanggalberita{
+            font-size: 18px;
+            text-align: left;
+            color: #1d3f8f;
+
+        }
+    
+        .bacaberita{
+            background-color: #1d3f8f;
+            width:200px;
+            height: 40px;
+            border-radius: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            
+
+        }
+        .semuatesti{
+            background-color: #1d3f8f;
+            width:400px;
+            height: 40px;
+            border-radius: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .semuatesti>a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .bacaberita>a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .kolom{
+            flex: 1;
+        }
+
+        /* kisahkami=================================== */
+
+        .tentangkami{
+            width: 100dvw;
+            height: 100dvh;
+            display: flex;
+            flex-direction: row;
+            gap :30px;
+            padding: 20px 50px 20px 50px;
+        }
+        .bagian{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 5px 15px 5pc 30px;
+        }
+
+        
+        .bagian>h5{
+            font-size: 38px;
+            color: #244593;
+        }
+
+        .bagian>p{
+            font-size: 20px;
+            word-spacing: 10px;
+           
+        }
+
+
+        
+
+
+
 
   /* bagian bawah */
       
@@ -236,7 +722,7 @@
         }
 
         .newsletter input[type="email"] {
-            background-color: #854c4c;
+            background-color: white;
             color: #333;
         }
 
@@ -320,23 +806,18 @@
                 flex-direction: column;
             }
         }
+
+       
     </style>
 </head>
 <body>
-    <!-- header navigasi -->
     
-
-    <!-- main pertama  -->
-    
-
-       
-            <main>
-        
-         <section class="bagian awal"
+    <header>
+          <section class="bagian awal"
         style="flex: 1;
         display: flex;">
        
-        <header class="navigasi-home"
+        <section class="navigasi-home"
     style=" 
         flex:1;
         background-color:white;
@@ -369,16 +850,18 @@
         flex-direction: row;
         justify-content: right;
         margin: 50px;">
-            <a class="navigasi" href="#">Home</a>
-            <a class="navigasi" href="#">About</a>
-            <a class="navigasi" href="#">Products</a>
-            <a class="navigasi" href="#">Testimonials</a>
-            <a class="navigasi" href="#">Contacts</a>
+           <section class="activenavigation"> <a class="navigasi" href="Home.html">Home</a></section>
+           <section class="closenavigation">  <a class="navigasi" href="#">About</a></section>
+           <section class="closenavigation">   <a class="navigasi" href="#">Products</a></section>
+           <section class="closenavigation">   <a class="navigasi" href="#">Testimonials</a></section>
+           <section class="closenavigation">  <a class="navigasi" href="#">Contacts</a></section>
+           
+          
+          
+           
             
         </section>
-    </header>
-
-        
+        </section>
 
 
         <div class="slider">
@@ -452,15 +935,639 @@
   }
 </script>
 
+
+        </section>
+       
+
+    </header>
+    
+       
+    <main>
+         <section
+        class="bagiandua"
+        style="background-color: #ffffff;
+        width: 100dvw;
+        height: 70dvw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 10px 20px 20px 20px;">
+
+         <section class="icon">
+             <i class="fa-solid fa-sun"></i>
+             <i class="fa-solid fa-moon"></i>
         </section>
 
-        <section class="bagian 2">
-            <section class="displayproduk">
+       <section class="tawar">  <h1>Temukan kasur yang cocok untuk kamu</h1> 
+    </section>
+
+    <section class="display">
+        <section class="infoproduk">
+        <section class="produk">
+            <section class="fotoproduk">
+                 <img src="Hybrid Mattress Premium.png" alt="produk" width="80%">
+            </section>
+           
+
+            <section class="deskproduk">
+
+            <section class="ulasan">
+                 <section class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+            </section>
+            <p class="review" style="color: gray;">(1298 reviews)</p>
+            </section>
+            <br>
+           <h3>ALPHA PREMIUM HYBRID MATTRESS</h3>
+           <br>
+           <section class="price">
+            <p class="promo"><del>Rp. 6.005.000</del></p>
+            <p class="harga">Rp. 4.200.000</p>
+           </section>
+
+           <br>
+
+           <section class="spesifikasi"
+           style="display: flex;
+           flex-direction: row;
+           justify-content: start;
+           gap : 100px;">
+            <section class="firmness">
+                <h5>Firmness</h5>
+                <p>Medium Plush</p>
+            </section>
+            <section class="ketebalan">
+                <h5>Ketebalan</h5>
+                <p>30 cm</p>
+            </section>
+           </section>
+
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Kesejukan</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Topangan</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Responsif</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+
+            
 
             </section>
-        <i class="fa-solid fa-phone"></i>
-    
+            
+        </section>
+
+        <button class="caritahu"> Lihat Hybrid Mattress Premium</button>
+
+        </section>
+        <section class="infoproduk">
+        <section class="produk">
+            <section class="fotoproduk">
+                 <img src="upholstered bed frame.jpg" alt="produk" width="80%">
+            </section>
+           
+
+            <section class="deskproduk">
+
+            <section class="ulasan">
+                 <section class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+            </section>
+            <p class="review" style="color: gray;">(2004 reviews)</p>
+            </section>
+            <br>
+           <h3>ALPHA UNPHOLSTERED BED FRAME</h3>
+           <br>
+           <section class="price">
+            <p class="promo"><del>Rp. 8.200.000</del></p>
+            <p class="harga">Rp. 5.999.999</p>
+           </section>
+
+           <br>
+
+           <section class="spesifikasi"
+           style="display: flex;
+           flex-direction: row;
+           justify-content: start;
+           gap : 100px;">
+            <section class="firmness">
+                <h5>Firmness</h5>
+                <p>Medium Firm</p>
+            </section>
+            <section class="ketebalan">
+                <h5>Ketebalan</h5>
+                <p>25–30 cm</p>
+            </section>
+           </section>
+
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Kesejukan</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Topangan</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Responsif</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+
+            
+
+            </section>
+            
+        </section>
+
+        <button class="caritahu">Lihat Upholstered Bed Frame</button>
+
+        </section>
+        <section class="infoproduk">
+        <section class="produk">
+            <section class="fotoproduk">
+                 <img src="Wingback Upholstered Bed.jpg" alt="produk" width="80%">
+            </section>
+           
+
+            <section class="deskproduk">
+
+            <section class="ulasan">
+                 <section class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+            </section>
+            <p class="review" style="color: gray;">(983 reviews)</p>
+            </section>
+            <br>
+           <h3>ALPHA WINGBACK UPHOLSTERED BED</h3>
+           <br>
+           <section class="price">
+            <p class="promo"><del>Rp. 6.005.000</del></p>
+            <p class="harga">Rp. 4.200.000</p>
+           </section>
+
+           <br>
+
+           <section class="spesifikasi"
+           style="display: flex;
+           flex-direction: row;
+           justify-content: start;
+           gap : 100px;">
+            <section class="firmness">
+                <h5>Firmness</h5>
+                <p>Medium</p>
+            </section>
+            <section class="ketebalan">
+                <h5>Ketebalan</h5>
+                <p>28–35 cm</p>
+            </section>
+           </section>
+
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Kesejukan</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segmen"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Topangan</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+           <section class="probar">
+                 <div class="spec">
+                    
+                    <p class="protext">Responsif</p>
+            <div class="bar">
+
+                <div class="segment active"></div>
+                <div class="segment active"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+
+            </div>
+            </div>
+            </section>
+
+            
+
+            </section>
+            
+        </section>
+
+        <button class="caritahu">Lihat Wingback Upholstered Bed</button>
+
+        </section>
+</section>
+</section>
+<section class="bagiantiga"
+ style="background-color: #ffffff;
+        width: 100dvw;
+        height: 37dvw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 10px 20px 0px 20px;">
+    <section class="flashsale">
+        <div class="judulflashsale">
+            <h2>⚡ FLASH SALE SPECIAL OFFER ⚡</h2>
+
+            <div id="timerpromo" style="font-size: 2rem; font-weight: bold">
+                00:00:00
+            </div>
+
+            <p>Segera checkout sebelum kehabisan!</p>
+        </div>
+
+        <div class="boxtombol">
+            <button class="flashbutton">ORDER SEKARANG</button>
+        </div>
     </section>
+</section>
+
+
+<!-- <section class="popup">
+     <div id="modalpromo">
+        <div
+            style="
+                background-color: white;
+                margin: 15% auto;
+                padding: 30px;
+                width: 30dvw;
+                text-align: center;
+                border-radius: 15px;
+                position: relative;
+            "
+        >
+            <span
+                onclick="closePromo()"
+                style="
+                    position: absolute;
+                    right: 15px;
+                    top: 10px;
+                    cursor: pointer;
+                    font-size: 20px;
+                "
+            >
+                &times;
+            </span>
+
+            <h2 style="color:  #1d3f8f">KHUSUS PEMBELIAN PERTAMA ANDA!</h2>
+            <br>
+
+            <p>
+                Gunakan kode <b>ALPHATHEFIRST26</b> diskon  sebesar 15% pada pembelian
+                pertama Anda.
+            </p>
+            <br>
+
+            <button
+                onclick="closePromo()"
+                style="
+                    background:  #1d3f8f;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                "
+            >
+                Claim Diskon
+            </button>
+        </div>
+    </div>
+</section> -->
+
+ <section
+        class="bagianempat"
+        style="background-color: #ffffff;
+        width: 100dvw;
+        height: 70dvw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 10px 20px 20px 20px;">
+
+
+       <section class="judultesti">  <h1 style="text-align: center;">Dipercaya Lebih dari +700.000 Pelanggan</h1> 
+        <br>
+        <p>Masih terus bertambah hingga sekarang </p>
+    </section>
+
+    <section class="reviewer">
+        <section class="testibox">
+            <section class="fotprofil">
+              <i class="fa-solid fa-user"></i>
+            </section>
+
+            <section class="komentar">
+                <p class="komen">“Kasurnya empuk tapi tetap support punggung. Tidur jadi lebih nyenyak dan nggak pegal pas bangun.”</p>
+            </section>
+           
+
+            <section class="rate">
+
+                 <section class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+            </section>
+            </section>
+
+            <section class="komentator">
+                <h2 class="pembeli">Arima</h2>
+                <p class="probeli">ALPHA PREMIUM</p>
+            </section>
+
+        </section>
+
+        <section class="testibox">
+            <section class="fotprofil">
+              <i class="fa-solid fa-user"></i>
+            </section>
+
+            <section class="komentar">
+                <p class="komen">“Tingkat firmness sekitar 6/10 menurut saya, masih nyaman untuk sleeper posisi telentang maupun menyamping.”</p>
+            </section>
+           
+
+            <section class="rate">
+
+                 <section class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+            </section>
+            </section>
+
+            <section class="komentator">
+                <h2 class="pembeli">Bartina</h2>
+                <p class="probeli">ALPHA Upholstered</p>
+            </section>
+
+        </section>
+
+        <section class="testibox">
+            <section class="fotprofil">
+              <i class="fa-solid fa-user"></i>
+            </section>
+
+            <section class="komentar">
+                <p class="komen">“Awalnya ragu beli online, ternyata kualitas materialnya bagus dan tidak panas saat dipakai tidur.”</p>
+            </section>
+           
+
+            <section class="rate">
+
+                 <section class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+            </section>
+            </section>
+
+            <section class="komentator">
+                <h2 class="pembeli">Mike</h2>
+                <p class="probeli">ALPHA Royal</p>
+            </section>
+
+        </section>
+        
+
+        
+</section>
+        <button class="lihattesti"><a href="#f">Lihat Semua Testimoni</a></button>
+</section>
+
+ <section class="bagianlima"
+        style="background-color: rgb(255, 255, 255);
+        width: 100dvw;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        padding: 10px 20px 20px 20px;
+        gap : 20px;">
+
+        <section class="tentangkami">
+
+            <section class="bagian">
+                <h5> ABOUT US</h5>
+                <br>
+                <p>Di tengah gaya hidup modern yang serba cepat, kualitas tidur menjadi kebutuhan utama. Karena itulah Alpha Bed hadir sebagai solusi tidur nyaman dengan desain modern, material berkualitas, dan teknologi kasur yang mendukung kesehatan tubuh.</p>
+                <br>
+                <p>Kami percaya bahwa tidur bukan sekadar istirahat, tetapi investasi untuk kesehatan, produktivitas, dan kualitas hidup yang lebih baik. Dengan menggabungkan kenyamanan, durability, dan desain elegan, Alpha Bed berkomitmen menghadirkan pengalaman tidur terbaik untuk setiap pelanggan.</p>
+                <br>
+                <p>Setiap produk Alpha Bed dirancang menggunakan material pilihan yang mampu memberikan dukungan optimal bagi tubuh, menjaga sirkulasi udara tetap nyaman, serta menghadirkan sensasi tidur yang lebih rileks setiap malam.</p>
+            </section>
+            <section class="bagian">
+                <img src="about1.jpeg" alt="fotoperusahaan" width="100%">
+                <img src="about2.jpeg" alt="fotoperusahaan" width="100%">
+            </section>
+            </section>
+            </section>
+
+           
+
+ <section class="bagianenam"
+        style="background-color: rgb(85, 178, 255);
+        width: 100dvw;
+        height: 90dvw;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        padding: 10px 20px 20px 20px;
+        gap : 20px;">
+
+        <section class="kumpulblog">
+
+            <section class="kolom">
+                <section class="berita">
+            <section class="fotberita">
+              <img src="berita1.jpeg" alt="berita1" width="100%">
+            </section>
+            <section class="infoberita">
+                <p class="tanggalberita">20 Januari 2025</p>
+                <h2 class="judulberita">Salah Pilih Kasur Bisa Bikin Tidur Tidak Berkualitas, Ini Faktanya</h2>
+            </section>
+                <button class="bacaberita"><a href="#">Baca di sini</a></button>
+            
+        </section>
+
+                <section class="berita">
+            <section class="fotberita">
+              <img src="Berita2.webp" alt="berita2" width="100%">
+            </section>
+            <section class="infoberita">
+                <p class="tanggalberita">1 Maret 2026</p>
+                <h2 class="judulberita">Desain Minimalis dan Nyaman, Kasur Modern Jadi Favorit Baru</h2>
+            </section>
+                <button class="bacaberita"><a href="#">Baca di sini</a></button>
+            
+        </section>
+            </section>
+
+            <section class="kolom">
+                  <section class="berita">
+            <section class="fotberita">
+              <img src="berita3.jpg" alt="berita3" width="100%">
+            </section>
+            <section class="infoberita">
+                <p class="tanggalberita">9 September 2025</p>
+                <h2 class="judulberita">Inovasi Smart Mattress Hadir dengan Sensor Kualitas Tidur</h2>
+            </section>
+                <button class="bacaberita"><a href="#">Baca di sini</a></button>
+            
+        </section>
+                  <section class="berita">
+            <section class="fotberita">
+              <img src="berita4.webp" alt="berita1" width="100%">
+            </section>
+            <section class="infoberita">
+                <p class="tanggalberita">20 Desember 2025</p>
+                <h2 class="judulberita">Kasur Murah vs Kasur Premium, Apa Bedanya?</h2>
+            </section>
+                <button class="bacaberita"><a href="#">Baca di sini</a></button>
+            
+        </section>
+            </section>
+
+        </section>
+        </section>
+        <section class="bagianakhir"
+        style="display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100dvw;
+        height: 10dvh;
+        background-color: rgb(85, 178, 255);">
+             <button class="semuatesti"><a href="#">Lihat semua testimoni</a></button>
+        </section>
+         
+            
+      
     </main>
 
     <footer class="footer">
@@ -495,9 +1602,9 @@
             <div class="footer-col">
                 <h3>Customer Care</h3>
                 <ul>
-                    <li><i class="fa-solid fa-phone"></i> +62 8xx xxxx xxxx</li>
-                    <li><i class="fa-solid fa-envelope"></i> support@alphabed.com</li>
-                    <li><i class="fa-regular fa-clock"></i> Senin - Sabtu | 09.00 - 18.00</li>
+                    <li ><i class="fa-solid fa-phone" style="margin-right: 10px;"></i>+62 8xx xxxx xxxx</li>
+                    <li><i class="fa-solid fa-envelope"style="margin-right: 10px;"></i>support@alphabed.com</li>
+                    <li><i class="fa-regular fa-clock"style="margin-right: 10px;"></i>Senin - Sabtu | 09.00 - 18.00</li>
                 </ul>
             </div>
         </div>
@@ -510,6 +1617,50 @@
     </footer>
 
 </body>
+<script>
+    let targetTime = new Date().getTime() + 1 * 60 * 60 * 1000;
+
+    function updateTimer() {
+        let now = new Date().getTime();
+        let distance = targetTime - now;
+
+        let hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+
+        let minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60),
+        );
+
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("timerpromo").innerHTML =
+            `${hours.toString().padStart(2, "0")}:` +
+            `${minutes.toString().padStart(2, "0")}:` +
+            `${seconds.toString().padStart(2, "0")}`;
+
+        if (distance < 0) {
+            clearInterval(timerInterval);
+            document.getElementById("timerpromo").innerHTML =
+                "PROMO SELESAI";
+        }
+    }
+
+    let timerInterval = setInterval(updateTimer, 1000);
+
+    updateTimer();
+</script>
+
+<script>
+    setTimeout(() => {
+        document.getElementById("modalpromo").style.display = "block";
+    }, 5000);
+
+    function closePromo() {
+        document.getElementById("modalpromo").style.display = "none";
+    }
+</script>
+
 </html>
 </body>
 </html>

@@ -12,7 +12,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
     <style>
         body{
-        background-color: gainsboro;
+        background-image: url(lightmode.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 100dvw;
         height: 700dvh;
         display: flex;
@@ -21,10 +23,80 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         gap : 5px;
 
     }
+
+   
+
+    /* LIGHT MODE */
+        body.light{
+            background-image: url(lightmode.jpeg);
+            color: black;
+        }
+
+/* DARK MODE */
+        body.dark{
+            background-image: url(nightmode.webp);
+            background-repeat:repeat;
+            background-size: auto;
+            color: white;
+        }
+         body.dark p{
+        color: black
+        }
+
+        body.dark h2{
+            color: black;
+        }
+        body.dark h1{
+            color:#4a93dd;
+        }
+        body.dark .judultesti>p{
+            color:#4a93dd;
+        }
+        body.dark h5{
+            color:#4a93dd;
+        }
+        body.dark .tanggalberita{
+            color:#1d3f8f;
+        }
+        body.dark .bagian>p{
+            color:white;
+        }
+        body.dark .caption{
+            color:white;
+        }
+       
+
+
+/* SWITCH */
+        .switch{
+            width: 60px;
+            height: 30px;
+            background: gray;
+            border-radius: 30px;
+            position: relative;
+            cursor: pointer;
+            margin: 20px;
+        }
+
+        .circle{
+            width: 24px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            transition: 0.3s;
+        }
+
+/* Saat dark mode */
+        body.dark .circle{
+            left: 33px;
+        }
+
     main{
         width: 100dvw;
         height: 700dvw;
-        background-color: #000000;
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -47,11 +119,45 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         }
 
         a.navigasi{
-            gap:10px;
             text-decoration: none;
             color: #0c1c15;
             font-size: 18px;
         }
+
+        .activenavigation {
+        width:fit-content;
+        background-color:#1d3f8f;
+        border-radius: 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+        .activenavigation>a {
+        color: white;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+        .closenavigation>a {
+        color: black;
+    }
+
+
+     .closenavigation {
+        flex: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
     /* slider */
       .slider{
     width:100dvw;
@@ -816,11 +922,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         flex-direction: row;
         justify-content: right;
         margin: 50px;">
-            <a class="navigasi" href="#">Home</a>
-            <a class="navigasi" href="#">About</a>
-            <a class="navigasi" href="#">Products</a>
-            <a class="navigasi" href="#">Testimonials</a>
-            <a class="navigasi" href="#">Contacts</a>
+           <section class="activenavigation"> <a class="navigasi" href="Home.html">Home</a></section>
+           <section class="closenavigation">  <a class="navigasi" href="#">About</a></section>
+           <section class="closenavigation">   <a class="navigasi" href="#">Products</a></section>
+           <section class="closenavigation">   <a class="navigasi" href="#">Testimonials</a></section>
+           <section class="closenavigation">  <a class="navigasi" href="#">Contacts</a></section>
+           
+          
+          
+           
             
         </section>
         </section>
@@ -907,7 +1017,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     <main>
          <section
         class="bagiandua"
-        style="background-color: #ffffff;
+        style="
         width: 100dvw;
         height: 70dvw;
         display: flex;
@@ -916,8 +1026,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         justify-content: start;
         padding: 10px 20px 20px 20px;">
 
+        <script>
+        function toggleTheme(){
+            document.body.classList.toggle("dark");
+            document.body.classList.toggle("light");
+            }
+        </script>
+
          <section class="icon">
-             <i class="fa-solid fa-sun"></i>
+            <i class="fa-solid fa-sun"></i>
+            <div class="switch" onclick="toggleTheme()">
+            <div class="circle"></div>
+            </div>
              <i class="fa-solid fa-moon"></i>
         </section>
 
@@ -1234,7 +1354,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 </section>
 </section>
 <section class="bagiantiga"
- style="background-color: #ffffff;
+ style="
         width: 100dvw;
         height: 37dvw;
         display: flex;
@@ -1314,7 +1434,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
  <section
         class="bagianempat"
-        style="background-color: #ffffff;
+        style="
         width: 100dvw;
         height: 70dvw;
         display: flex;
@@ -1421,7 +1541,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 </section>
 
  <section class="bagianlima"
-        style="background-color: rgb(255, 255, 255);
+        style="
         width: 100dvw;
         height: fit-content;
         display: flex;
@@ -1452,7 +1572,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
            
 
  <section class="bagianenam"
-        style="background-color: rgb(85, 178, 255);
+        style="background-color: rgb(85, 178, 255,0.5);
         width: 100dvw;
         height: 90dvw;
         display: flex;
@@ -1524,7 +1644,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         justify-content: center;
         width: 100dvw;
         height: 10dvh;
-        background-color: rgb(85, 178, 255);">
+        background-color: rgb(85, 178, 255,0.5);">
              <button class="semuatesti"><a href="#">Lihat semua testimoni</a></button>
         </section>
          
@@ -1536,8 +1656,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         <div class="footer-container">
             <!-- Kolom 1: Brand & Newsletter -->
             <div class="footer-col brand-col">
-                <h2>ALPHA BED</h2>
-                <p>Tidur berkualitas untuk hidup yang lebih berkualitas. Menghadirkan kenyamanan premium dengan desain elegan dan daya tahan terbaik.</p>
+                <h2 style="color: white;">ALPHA BED</h2>
+                <p style="color: white;">Tidur berkualitas untuk hidup yang lebih berkualitas. Menghadirkan kenyamanan premium dengan desain elegan dan daya tahan terbaik.</p>
                 
                 <div class="newsletter">
                     <h3>Newsletter</h3>
