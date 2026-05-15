@@ -12,7 +12,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
     <style>
         body{
-        background-color: gainsboro;
+        background-image: url(lightmode.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 100dvw;
         height: 700dvh;
         display: flex;
@@ -21,10 +23,83 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         gap : 5px;
 
     }
+
+   
+
+    /* LIGHT MODE */
+        body.light{
+            background-image: url(lightmode.jpeg);
+            color: black;
+        }
+
+/* DARK MODE */
+        body.dark{
+            background-image: url(nightmode.jpg);
+            background-repeat:repeat;
+            background-size: auto;
+            color: white;
+        }
+         body.dark p{
+        color: black
+        }
+
+        body.dark h2{
+            color: black;
+        }
+        body.dark h1{
+            color:#4a93dd;
+        }
+        body.dark .judultesti>p{
+            color:#4a93dd;
+        }
+        body.dark h5{
+            color:#4a93dd;
+        }
+        body.dark .tanggalberita{
+            color:#1d3f8f;
+        }
+        body.dark .bagian>p{
+            color:white;
+        }
+        body.dark .caption{
+            color:white;
+        }
+        body.dark .fotprofil>i{
+            color:black;
+        }
+       
+
+
+/* SWITCH */
+        .switch{
+            width: 60px;
+            height: 30px;
+            background: gray;
+            border-radius: 30px;
+            position: relative;
+            cursor: pointer;
+            margin: 20px;
+        }
+
+        .circle{
+            width: 24px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            transition: 0.3s;
+        }
+
+/* Saat dark mode */
+        body.dark .circle{
+            left: 33px;
+        }
+
     main{
         width: 100dvw;
         height: 700dvw;
-        background-color: #000000;
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -67,8 +142,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     }
         .activenavigation>a {
         color: white;
-        margin-left: 2px;
-        margin-right: 2px;
+        margin: 5px 5px 5px 5px;
     }
         .closenavigation>a {
         color: black;
@@ -77,15 +151,24 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
      .closenavigation {
         flex: 1;
-
         display: flex;
         justify-content: center;
         align-items: center;
-
-        color: white;
         font-size: 20px;
         font-weight: bold;
     }
+
+    .closenavigation:hover{
+        background-color: #4a93dd;
+        border-radius: 5px;
+        transition:  background-color 1s;
+    }
+     .closenavigation>a:hover {
+        color: white;
+        margin: 5px 5px 5px 5px;
+        transition: color 1s, margin 1s;
+    }
+
     /* slider */
       .slider{
     width:100dvw;
@@ -196,9 +279,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     width: 250px;
     height: 50px;
     border-radius: 20px;
-    background-color:#0c1c15;
+    background-color:#1d3f8f;
     color: white;
     border: solid white 1px;
+  }
+
+  .selengkapnya:hover{
+    width: 300px;
+    height: 60px;
+    transition: width 2s,height 2s;
+
   }
 
   /* section tengah pertama */
@@ -226,7 +316,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
   .icon>i{
     font-size: 30px;
-     color: red;
+     color: white;
   }
 
   
@@ -374,6 +464,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             background-color:#1d3f8f;
             color: white;
             border: solid gray 1px;
+        }
+        .caritahu:hover{
+            background-color:#021136;
         }
         .fotoproduk{
             display: flex;
@@ -528,6 +621,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             
 
         }
+        .lihattesti:hover{
+            background-color: #021136;
+        }
         .lihattesti>a{
             color: white;
             text-decoration: none;
@@ -600,14 +696,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             
 
         }
-        .semuatesti{
-            background-color: #1d3f8f;
-            width:400px;
-            height: 40px;
-            border-radius: 20px;
-            margin-top: 10px;
-            margin-bottom: 10px;
+        .bacaberita:hover{
+            background-color: #021136;
         }
+    
 
         .semuatesti>a{
             color: white;
@@ -885,26 +977,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         <div class="isian"></div>
        <img src="slider2.jpg" alt="slider2">
         <section class="text">
-             <h class="description"><b>Sleep Like Never Before</b></h>
+             <h class="description"><b>Sleep Better, Live Better</b></h>
              <br>
-            <p class="caption">Rasakan kenyamanan tidur dengan kualitas terbaik bersama Alphabed.
-        Desain elegan, material premium, dan kelembutan yang membuat setiap malam terasa lebih sempurna. 
-        Karena istirahat bukan sekadar tidur — ini tentang memulihkan energi untuk hari yang lebih baik.
-        </p>
         <button class="selengkapnya">Selengkapnya</button>
     </section>
     </section>
 
     <section class="objek">
         <div class="isian"></div>
-        <img src="slider3.jpg" alt="slider3">
+        <img src="slider3.jpeg" alt="slider3">
         <section class="text">
-             <h class="description"><b>Sleep Like Never Before</b></h>
+             <h class="description"><b>Alphabet — Tempat Terbaik untuk Mengistirahatkan Hari Anda</b></h>
              <br>
-            <p class="caption">Rasakan kenyamanan tidur dengan kualitas terbaik bersama Alphabed.
-        Desain elegan, material premium, dan kelembutan yang membuat setiap malam terasa lebih sempurna. 
-        Karena istirahat bukan sekadar tidur — ini tentang memulihkan energi untuk hari yang lebih baik.
-        </p>
         <button class="selengkapnya">Selengkapnya</button>
     </section>
     </section>
@@ -945,7 +1029,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     <main>
          <section
         class="bagiandua"
-        style="background-color: #ffffff;
+        style="
         width: 100dvw;
         height: 70dvw;
         display: flex;
@@ -954,8 +1038,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         justify-content: start;
         padding: 10px 20px 20px 20px;">
 
+        <script>
+        function toggleTheme(){
+            document.body.classList.toggle("dark");
+            document.body.classList.toggle("light");
+            }
+        </script>
+
          <section class="icon">
-             <i class="fa-solid fa-sun"></i>
+            <i class="fa-solid fa-sun"></i>
+            <div class="switch" onclick="toggleTheme()">
+            <div class="circle"></div>
+            </div>
              <i class="fa-solid fa-moon"></i>
         </section>
 
@@ -1272,7 +1366,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 </section>
 </section>
 <section class="bagiantiga"
- style="background-color: #ffffff;
+ style="
         width: 100dvw;
         height: 37dvw;
         display: flex;
@@ -1352,7 +1446,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
  <section
         class="bagianempat"
-        style="background-color: #ffffff;
+        style="
         width: 100dvw;
         height: 70dvw;
         display: flex;
@@ -1459,7 +1553,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 </section>
 
  <section class="bagianlima"
-        style="background-color: rgb(255, 255, 255);
+        style="
         width: 100dvw;
         height: fit-content;
         display: flex;
@@ -1490,7 +1584,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
            
 
  <section class="bagianenam"
-        style="background-color: rgb(85, 178, 255);
+        style="background-color: rgb(85, 178, 255,0.5);
         width: 100dvw;
         height: 90dvw;
         display: flex;
@@ -1555,16 +1649,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
         </section>
         </section>
-        <section class="bagianakhir"
-        style="display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 100dvw;
-        height: 10dvh;
-        background-color: rgb(85, 178, 255);">
-             <button class="semuatesti"><a href="#">Lihat semua testimoni</a></button>
-        </section>
+    
          
             
       
@@ -1574,8 +1659,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         <div class="footer-container">
             <!-- Kolom 1: Brand & Newsletter -->
             <div class="footer-col brand-col">
-                <h2>ALPHA BED</h2>
-                <p>Tidur berkualitas untuk hidup yang lebih berkualitas. Menghadirkan kenyamanan premium dengan desain elegan dan daya tahan terbaik.</p>
+                <h2 style="color: white;">ALPHA BED</h2>
+                <p style="color: white;">Tidur berkualitas untuk hidup yang lebih berkualitas. Menghadirkan kenyamanan premium dengan desain elegan dan daya tahan terbaik.</p>
                 
                 <div class="newsletter">
                     <h3>Newsletter</h3>
