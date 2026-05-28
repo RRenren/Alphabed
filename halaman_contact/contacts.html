@@ -16,7 +16,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         background-repeat: no-repeat;
         background-size: cover; */
         width: 100dvw;
-        height: 700dvh;
+        height: 200dvh;
         display: flex;
         flex-direction: column;
         margin: 0;
@@ -28,7 +28,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
     main{
         width: 100dvw;
-        height: 700dvw;
+        height: 200dvw;
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -100,155 +100,218 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 
   /* bagian bawah */
-      
+     
 
         
 
-        .footer {
-            background-color: #0c1c15; 
-            color: #d1d5d3; 
-            padding: 60px 20px 20px 20px;
-        }
-
-        .footer-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 40px;
-        }
-
-        /* Kolom Footer */
-        .footer-col {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        /* Kolom Brand & Newsletter (Kiri) */
-        .brand-col h2 {
-            color: #ffffff;
-            font-size: 20px;
-            letter-spacing: 1.5px;
-            margin-bottom: 15px;
-        }
-
-        .brand-col p {
-            font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 40px;
-            max-width: 300px;
-        }
-
-        .newsletter h3 {
-            color: #ffffff;
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-
-        .newsletter form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            max-width: 300px;
-        }
-
-        .newsletter input[type="email"],
-        .newsletter button {
-            width: 100%;
-            padding: 12px 15px;
-            border: none;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-
-        .newsletter input[type="email"] {
-            background-color: white;
-            color: #333;
-        }
-
-        .newsletter input[type="email"]:focus {
-            outline: none;
-            box-shadow: 0 0 5px rgba(255,255,255,0.5);
-        }
-
-        .newsletter button {
-            background-color: #ffffff;
-            color: #000000;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .newsletter button:hover {
-            background-color: #e0e0e0;
-        }
-
-        /* Kolom Links & Customer Care (Tengah & Kanan) */
-        .footer-col h3 {
-            color: #ffffff;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        .footer-col ul {
-            list-style: none;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 12px;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .footer-col ul li a {
-            color: #d1d5d3;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-col ul li a:hover {
-            color: #ffffff;
-        }
-
-        .footer-col ul li i {
-            color: #d1d5d3;
-            width: 16px;
-        }
-
-        /* Bagian Bawah Footer (Copyright) */
-        .footer-bottom {
-            max-width: 1100px;
-            margin: 60px auto 0;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
-            font-size: 13px;
-        }
-
-        .footer-bottom p {
-            margin-bottom: 5px;
-        }
-
-        .footer-bottom a {
-            color: #d1d5d3;
-            text-decoration: none;
-        }
-
-        .footer-bottom a:hover {
-            color: #ffffff;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .footer-container {
-                flex-direction: column;
+            .footer {
+                background-color: #0c1c15; 
+                color: #d1d5d3; 
+                padding: 60px 20px 20px 20px;
             }
-        }
 
-       
+            .footer-container {
+                max-width: 1100px;
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 40px;
+            }
+
+            /* Kolom Footer */
+            .footer-col {
+                flex: 1;
+                min-width: 250px;
+            }
+
+            /* Kolom Brand & Newsletter (Kiri) */
+            .brand-col h2 {
+                color: #ffffff;
+                font-size: 20px;
+                letter-spacing: 1.5px;
+                margin-bottom: 15px;
+            }
+
+            .brand-col p {
+                font-size: 14px;
+                line-height: 1.6;
+                margin-bottom: 40px;
+                max-width: 300px;
+            }
+
+            .newsletter h3 {
+                color: #ffffff;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+            .newsletter form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                max-width: 300px;
+            }
+
+            .newsletter input[type="email"],
+            .newsletter button {
+                width: 100%;
+                padding: 12px 15px;
+                border: none;
+                border-radius: 4px;
+                font-size: 14px;
+            }
+
+            .newsletter input[type="email"] {
+                background-color: white;
+                color: #333;
+            }
+
+            .newsletter input[type="email"]:focus {
+                outline: none;
+                box-shadow: 0 0 5px rgba(255,255,255,0.5);
+            }
+
+            .newsletter button {
+                background-color: #ffffff;
+                color: #000000;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .newsletter button:hover {
+                background-color: #e0e0e0;
+            }
+
+            /* Kolom Links & Customer Care (Tengah & Kanan) */
+            .footer-col h3 {
+                color: #ffffff;
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            .footer-col ul {
+                list-style: none;
+            }
+
+            .footer-col ul li {
+                margin-bottom: 12px;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .footer-col ul li a {
+                color: #d1d5d3;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            .footer-col ul li a:hover {
+                color: #ffffff;
+            }
+
+            .footer-col ul li i {
+                color: #d1d5d3;
+                width: 16px;
+            }
+
+            /* Bagian Bawah Footer (Copyright) */
+            .footer-bottom {
+                max-width: 1100px;
+                margin: 60px auto 0;
+                padding-top: 20px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                text-align: center;
+                font-size: 13px;
+            }
+
+            .footer-bottom p {
+                margin-bottom: 5px;
+            }
+
+            .footer-bottom a {
+                color: #d1d5d3;
+                text-decoration: none;
+            }
+
+            .footer-bottom a:hover {
+                color: #ffffff;
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .footer-container {
+                    flex-direction: column;
+                }
+            }
+
+            /* ============================================================
+               CSS TAMBAHAN UNTUK CONTACT SECTION (HANYA DITAMBAHKAN)
+               ============================================================ */
+            .contact-section {
+                width: 100%;
+                max-width: 1000px;
+                margin: 50px auto;
+                padding: 0 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-header { text-align: center; margin-bottom: 40px; }
+            .page-header h1 { font-size: 2.5rem; color: #0c1c15; margin-bottom: 10px; }
+            .page-header p { color: #555; font-size: 1.05rem; }
+            
+            .contact-wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1.5fr;
+                background: #ffffff;
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                border: 1px solid #e0e0e0;
+                width: 100%;
+            }
+            
+            .contact-info {
+                background-color: #0c1c15;
+                color: white;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .contact-info h3 { font-size: 1.5rem; margin-bottom: 25px; }
+            .info-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; line-height: 1.5; }
+            .info-item i { font-size: 1.2rem; margin-top: 2px; color: #d1d5d3; }
+            
+            .contact-form-container { padding: 40px; width: 100%;}
+            .contact-form { display: flex; flex-direction: column; gap: 20px; }
+            .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+            .form-group { display: flex; flex-direction: column; gap: 8px; }
+            .form-group label { font-weight: 600; color: #0c1c15; font-size: 0.9rem; }
+            
+            .contact-form input, .contact-form textarea {
+                width: 100%; padding: 12px 15px; border: 1px solid #ccc;
+                border-radius: 8px; font-size: 1rem; background-color: #f9f9f9;
+            }
+            .contact-form input:focus, .contact-form textarea:focus {
+                outline: none; border-color: #1d3f8f; background-color: white;
+                box-shadow: 0 0 0 3px rgba(29, 63, 143, 0.15);
+            }
+            
+            .btn-submit {
+                background-color: #1d3f8f; color: white; border: none; padding: 15px;
+                border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; margin-top: 10px;
+            }
+            .btn-submit:hover { background-color: #152d66; }
+            
+            @media (max-width: 768px) {
+                .contact-wrapper, .form-row { grid-template-columns: 1fr; }
+            }
+           
     </style>
 </head>
 <body>
@@ -288,21 +351,86 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         flex-direction: row;
         justify-content: right;
         margin: 50px;">
-           <section class="closenavigation"> <a class="navigasi" href="/halaman_home/Home.html">Home</a></section>
-           <section class="closenavigation">  <a class="navigasi" href="/halaman_about/about.html">About</a></section>
-           <section class="closenavigation">   <a class="navigasi" href="/halaman_product/products.html">Products</a></section>
-           <section class="closenavigation">   <a class="navigasi" href="/halaman_testimonials/testimonials.html">Testimonials</a></section>
-           <section class="activenavigation">  <a class="navigasi" href="/halaman_contact/contacts.html">Contacts</a></section>
+           <section class="closenavigation"> <a class="navigasi" href="Home.html">Home</a></section>
+           <section class="closenavigation">  <a class="navigasi" href="about.html">About</a></section>
+           <section class="closenavigation">   <a class="navigasi" href="products.html">Products</a></section>
+           <section class="closenavigation">   <a class="navigasi" href="testimonials.html">Testimonials</a></section>
+           <section class="activenavigation">  <a class="navigasi" href="contacts.html">Contacts</a></section>
 
     </header>
     
        
     <main>
+        <section class="contact-section">
+            <div class="page-header">
+                <h1>Hubungi Kami</h1>
+                <p>Punya pertanyaan atau butuh bantuan? Tim Alpha Bed selalu siap membantu Anda.</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Alamat Showroom</strong><br>
+                            Jl. Sudirman No. 45, Jakarta Pusat<br>DKI Jakarta 10210
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <strong>Telepon / WhatsApp</strong><br>
+                            +62 8xx xxxx xxxx<br>
+                            <small>(Senin - Sabtu, 09:00 - 18:00)</small>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong><br>
+                            support@alphabed.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Nama Depan</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Budi" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Nama Belakang</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Santoso" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Alamat Email</label>
+                            <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subjek</label>
+                            <input type="text" id="subject" name="subject" placeholder="Tanya Stok, Garansi, dll" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Pesan Anda</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tuliskan pertanyaan atau pesan Anda di sini..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Kirim Pesan Sekarang</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
         <div class="footer-container">
-            <!-- Kolom 1: Brand & Newsletter -->
             <div class="footer-col brand-col">
                 <h2 style="color: white;">ALPHA BED</h2>
                 <p style="color: white;">Tidur berkualitas untuk hidup yang lebih berkualitas. Menghadirkan kenyamanan premium dengan desain elegan dan daya tahan terbaik.</p>
@@ -316,7 +444,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
                 </div>
             </div>
 
-            <!-- Kolom 2: Quick Links -->
             <div class="footer-col">
                 <h3>Quick Links</h3>
                 <ul>
@@ -328,7 +455,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
                 </ul>
             </div>
 
-            <!-- Kolom 3: Customer Care -->
             <div class="footer-col">
                 <h3>Customer Care</h3>
                 <ul>
@@ -339,7 +465,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             </div>
         </div>
 
-        <!-- Copyright & Legal -->
         <div class="footer-bottom">
             <p>&copy; 2026 Alpha Bed. All Rights Reserved.</p>
             <p><a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms & Conditions</a></p>
@@ -351,4 +476,3 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 </html>
 </body>
 </html>
-
