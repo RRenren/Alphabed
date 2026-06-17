@@ -849,6 +849,7 @@ Gratis Ongkir ke Seluruh Indonesia dengan belanja minimal Rp5.000.000!
 <a href="/halaman_product/products.html" style="color: orange; margin-left: 10px">Cek Produk</a>
 
 <button
+    type="button"
     onclick="hideBar()"
     style="
         background: none;
@@ -864,11 +865,10 @@ Gratis Ongkir ke Seluruh Indonesia dengan belanja minimal Rp5.000.000!
 </div>
 
 <div style="margin-top: 50px"></div>
-</body>
 
 <script>
 function hideBar() {
-document.getElementById("sticky-promo").style.top = "-60px";
+document.getElementById("sticky-promo").style.display="none";
 }
 
 setInterval(() => {
@@ -880,5 +880,9 @@ setTimeout(() => {
 }, 500);
 }, 5000);
 </script>
+
+</body>
+
+
 </html>
 
